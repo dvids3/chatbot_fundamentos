@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f9;
+  color: #2B445F;
+  line-height: 1.6;
+}
+
+header {
+   background: linear-gradient(90deg, #E30613, #ffffff);
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: #2B445F;
+  margin-bottom: 1rem;
+  border-left: 6px solid #C2262B;
+  padding-left: 0.5rem;
+  font-size: 1.4rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 2.5rem;
+}
+
+label {
+  font-weight: bold;
+  color: #2B445F;
+}
+
+input, textarea, select {
+  padding: 0.9rem;
+  border: 1px solid #919698;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #C2262B;
+  box-shadow: 0 0 6px rgba(194, 38, 43, 0.3);
+  outline: none;
+}
+
+button {
+  padding: 0.9rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button[type="submit"], .btn-apply {
+  background: #C2262B;
+  color: #fff;
+}
+
+button[type="submit"]:hover, .btn-apply:hover {
+  background: #EABA3D;
+  color: #2B445F;
+}
+
+.btn-edit {
+  background: #2B445F;
+  color: #fff;
+}
+
+.btn-edit:hover {
+  background: #EABA3D;
+  color: #2B445F;
+}
+
+.btn-delete {
+  background: #919698;
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background: #C2262B;
+  color: #fff;
+}
+
+.lista-convocatorias ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-convocatorias li {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.lista-convocatorias li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.lista-convocatorias h3 {
+  margin: 0 0 0.5rem 0;
+  color: #C2262B;
+  font-size: 1.2rem;
+}
+
+.lista-convocatorias p {
+  margin: 0.3rem 0;
+  color: #333;
+}
+
+.lista-convocatorias button {
+  margin-right: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+header {
+  background: #C2262B;
+  color: #fff;
+  padding: 1.2rem 2rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+header .logo-udem {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  height: 50px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  form {
+    padding: 1.2rem;
+  }
+
+  .lista-convocatorias li {
+    padding: 1rem;
+  }
+}

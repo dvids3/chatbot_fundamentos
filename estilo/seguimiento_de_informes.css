@@ -1,0 +1,140 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9;
+  color: #1d3557;
+}
+
+header {
+  background: linear-gradient(90deg, #E30613, #ffffff);
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+.informes-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+thead {
+  background: #db0c14;
+  color: white;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+.estado {
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.estado.entregado {
+  background: #1d3557;
+  color: white;
+}
+
+.estado.pendiente {
+  background: #ffcc00;
+  color: #333;
+}
+
+.estado.retrasado {
+  background: #a50021;
+  color: white;
+}
+
+.progreso {
+  background: #e6e6e6;
+  border-radius: 8px;
+  height: 12px;
+  width: 120px;
+  margin: 0 auto;
+}
+
+.progreso .barra {
+  height: 12px;
+  border-radius: 8px;
+  background: #a50021;
+}
+
+button {
+  border: none;
+  padding: 0.6rem 1rem;
+  margin: 0.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.btn-ver {
+  background: #1d3557;
+  color: white;
+}
+
+.btn-ver:hover {
+  background: #457b9d;
+}
+
+.btn-descargar {
+  background: #a50021;
+  color: white;
+}
+
+.btn-descargar:hover {
+  background: #d62828;
+}
+
+textarea {
+  min-height: 60px;
+  resize: vertical;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #a50021;
+  box-shadow: 0 0 5px rgba(165,0,33,0.4);
+}

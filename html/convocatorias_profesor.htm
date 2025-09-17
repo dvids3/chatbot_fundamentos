@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convocatorias - Profesor</title>
+  <link rel="stylesheet" href="../estilo/convocatorias.css">
+</head>
+<body>
+<header>
+  <h1>Convocatorias 📢 - Estudiante</h1>
+  <img src="../imagenes/logo_udem.png" alt="Logo UdeMedellín" class="logo-udem">
+</header>
+
+
+  <main>
+    <!-- Formulario para crear convocatorias -->
+    <section class="formulario-convocatoria">
+      <h2>Crear nueva convocatoria</h2>
+      <form action="guardar_convocatoria.php" method="POST">
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" name="titulo" required>
+
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" name="descripcion" required></textarea>
+
+        <label for="fecha">Fecha límite</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <button type="submit">Publicar convocatoria</button>
+      </form>
+    </section>
+
+    <!-- Lista de convocatorias creadas -->
+    <section class="lista-convocatorias">
+      <h2>Convocatorias creadas</h2>
+      <ul>
+        <li>
+          <h3>Monitoría Matemáticas I</h3>
+          <p>Fecha límite: 20/09/2025</p>
+          <button>Editar</button>
+          <button>Eliminar</button>
+        </li>
+        <li>
+          <h3>Apoyo laboratorio física</h3>
+          <p>Fecha límite: 25/09/2025</p>
+          <button>Editar</button>
+          <button>Eliminar</button>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

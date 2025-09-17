@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+.header {
+  background: linear-gradient(90deg, #E30613, #ffffff);
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.logo {
+  height: 55px;
+}
+
+.resumen {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  justify-content: space-around;
+}
+
+.card {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.card.total { background: #444; }
+.card.aceptados { background: #006633; }
+.card.rechazados { background: #E30613; }
+.card.pendientes { background: #ff9800; }
+
+.dashboard {
+  padding: 2rem;
+}
+
+.subtitulo {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #E30613;
+  border-left: 6px solid #E30613;
+  padding-left: 10px;
+}
+
+.tabla-estudiantes {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabla-estudiantes th {
+  background: #E30613;
+  color: #fff;
+  padding: 1rem;
+}
+
+.tabla-estudiantes td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.tabla-estudiantes tr:hover {
+  background: #f0f9f5;
+  cursor: pointer;
+}
+
+.estado {
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.estado.pendiente { background: #ffe08a; color: #946200; }
+.estado.aceptado { background: #c8f7c5; color: #006633; }
+.estado.rechazado { background: #f8c5c5; color: #e30613; }
+
+.btn {
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-right: 0.3rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn.ver { background: #007bff; color: #fff; }
+.btn.ver:hover { background: #0056b3; }
+
+.btn.aceptar { background: #006633; color: #fff; }
+.btn.aceptar:hover { background: #004d26; transform: scale(1.05); }
+
+.btn.rechazar { background: #E30613; color: #fff; }
+.btn.rechazar:hover { background: #b8050f; transform: scale(1.05); }
+
+.panel {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.panel-contenido {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+.panel-contenido h2 {
+  margin-top: 0;
+  color: #E30613;
+}
+
+.cerrar {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #E30613;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+.acciones {
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

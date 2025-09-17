@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicación de Estudiantes</title>
+  <link rel="stylesheet" href="../estilo/aplicación_de_estudiantes.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Aplicación de Estudiantes 📝</h1>
+    <img src="../imagenes/logo_udem.png" alt="Logo UdeMedellín" class="logo">
+  </header>
+
+  <main class="contenedor">
+    <section class="info-convocatoria">
+      <h2>Monitoría Matemáticas I</h2>
+      <p><strong>Descripción:</strong> Apoyo en clases de primer semestre.</p>
+      <p><strong>Fecha límite:</strong> 20/09/2025</p>  
+    </section>
+
+    <section class="formulario">
+      <h3>Formulario de Aplicación</h3>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="codigo">Código estudiantil:</label>
+        <input type="text" id="codigo" name="codigo" required>
+
+        <label for="programa">Programa académico:</label>
+        <input type="text" id="programa" name="programa" required>
+
+        <label for="promedio">Promedio acumulado:</label>
+        <input type="number" id="promedio" name="promedio" step="0.01" required>
+
+        <label for="documento">Adjuntar hoja de vida (PDF):</label>
+        <input type="file" id="documento" name="documento" accept=".pdf" required>
+
+        <button type="submit">Enviar aplicación</button>
+      </form>
+    </section>
+
+    <section class="estado-aplicacion">
+      <h3>Estado de tu aplicación</h3>
+      <div class="estado-card pendiente">
+        <p><strong>Convocatoria:</strong> Monitoría Matemáticas I</p>
+        <p><strong>Estado:</strong> Pendiente de revisión</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

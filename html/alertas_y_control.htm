@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alertas y Control</title>
+  <link rel="stylesheet" href="../estilo/alertas_y_control.css">
+  <script defer src="../script/alertas_y_control.js"></script>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <h1>📢 Alertas y Control</h1>
+    <img src="../imagenes/logo_udem.png" alt="Logo UdeMedellín" class="logo">
+  </header>
+
+  <!-- ===== METRICAS RAPIDAS ===== -->
+  <section class="resumen">
+    <div class="card total">
+      <h3>👨‍🎓 Total Monitores</h3>
+      <p>25</p>
+    </div>
+    <div class="card alertas">
+      <h3>⚠️ Alertas Activas</h3>
+      <p>5</p>
+    </div>
+    <div class="card informes">
+      <h3>📄 Informes Pendientes</h3>
+      <p>8</p>
+    </div>
+  </section>
+
+  <!-- ===== ALERTAS VISUALES ===== -->
+  <section class="notificaciones">
+    <h2>🔔 Alertas Recientes</h2>
+    <div class="alertas-grid">
+      <div class="alerta critico">
+        <h4>❌ Informe atrasado</h4>
+        <p>Ana María no entregó reporte de agosto.</p>
+      </div>
+      <div class="alerta advertencia">
+        <h4>⚠️ Horas bajas</h4>
+        <p>Laura solo ha cumplido el 60% de sus horas.</p>
+      </div>
+      <div class="alerta info">
+        <h4>📌 Recordatorio</h4>
+        <p>Entrega de informe semanal antes del 20/09.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DASHBOARD ===== -->
+  <section class="dashboard">
+    <h2>📊 Indicadores Generales</h2>
+    <div class="indicadores">
+      <div class="indicador">
+        <h3>Horas cumplidas</h3>
+        <div class="barra"><span style="width: 75%;">75%</span></div>
+      </div>
+      <div class="indicador">
+        <h3>Tareas realizadas</h3>
+        <div class="barra gold"><span style="width: 80%;">18/24</span></div>
+      </div>
+      <div class="indicador">
+        <h3>Desempeño global</h3>
+        <p class="estado verde">Bueno 👍</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LISTADO ===== -->
+  <main class="tabla">
+    <h2>👨‍🏫 Estado de Monitores</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Horas</th>
+          <th>Informes</th>
+          <th>Alerta</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ana María López</td>
+          <td>60%</td>
+          <td>Pendiente</td>
+          <td><span class="badge critico">Atraso</span></td>
+          <td><button class="btn ver" onclick="abrirPerfil('Ana María López')">👀 Ver</button></td>
+        </tr>
+        <tr>
+          <td>Carlos Gómez</td>
+          <td>90%</td>
+          <td>Al día</td>
+          <td><span class="badge ok">OK</span></td>
+          <td><button class="btn ver" onclick="abrirPerfil('Carlos Gómez')">👀 Ver</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <!-- ===== PANEL PERFIL ===== -->
+  <aside id="panel-perfil" class="panel">
+    <div class="panel-contenido">
+      <span class="cerrar" onclick="cerrarPerfil()">&times;</span>
+      <div class="perfil-header">
+        <img src="../imagenes/avatar.png" alt="Foto estudiante" class="avatar">
+        <h2 id="nombre-estudiante">Perfil</h2>
+      </div>
+      <p><strong>Horas cumplidas:</strong> 60%</p>
+      <p><strong>Informes:</strong> Pendiente</p>
+      <p><strong>Última alerta:</strong> Informe atrasado</p>
+      <button class="btn aceptar">✅ Marcar como resuelto</button>
+    </div>
+  </aside>
+</body>
+</html>

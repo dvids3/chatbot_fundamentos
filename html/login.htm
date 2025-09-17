@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Monitorías Académicas</title>
+  <link rel="stylesheet" href="../estilo/login.css">
+</head>
+<body>
+  <div class="login-wrapper">
+    <!-- Imagen de fondo -->
+    <div class="login-image">
+      <img src="../imagenes/FOT1UNIV.jpg" alt="Fondo login">
+    </div>
+
+    <!-- Formulario -->
+    <div class="login-container">
+      <h2>Ingreso al Sistema</h2>
+      <form action="validar_login.php" method="POST">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" name="usuario" required placeholder="Correo o código institucional">
+
+        <label for="password">Contraseña</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" name="password" required placeholder="••••••••">
+          <button type="button" class="toggle-password" onclick="togglePassword()">👁️</button>
+        </div>
+
+        <button type="submit">Iniciar sesión</button>
+
+        <div class="extra-links">
+          <a href="#">¿Olvidaste tu contraseña?</a>
+          <a href="registro.htm">Registrarse</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

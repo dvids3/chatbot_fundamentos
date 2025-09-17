@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación y Asignación - Profesor</title>
+  <link rel="stylesheet" href="../estilo/evaluacion_y_asignacion.css">
+</head>
+<body>
+  <!-- ====== HEADER ====== -->
+  <header class="header">
+    <h1>Evaluación y Asignación</h1>
+    <img src="../imagenes/logo_udem.png" alt="Logo UdeMedellín" class="logo">
+  </header>
+
+  <!-- ====== RESUMEN ====== -->
+  <section class="resumen">
+    <div class="card total">
+      <h3>Total</h3>
+      <p>25 estudiantes</p>
+    </div>
+    <div class="card aceptados">
+      <h3>Aceptados</h3>
+      <p>10</p>
+    </div>
+    <div class="card rechazados">
+      <h3>Rechazados</h3>
+      <p>5</p>
+    </div>
+    <div class="card pendientes">
+      <h3>Pendientes</h3>
+      <p>10</p>
+    </div>
+  </section>
+
+  <!-- ====== TABLA DE ESTUDIANTES ====== -->
+  <main class="dashboard">
+    <h2 class="subtitulo">Listado de Estudiantes</h2>
+    <table class="tabla-estudiantes">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Código</th>
+          <th>Programa</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr onclick="abrirPanel('Ana María López', '202045678', 'Ingeniería de Sistemas')">
+          <td>Ana María López</td>
+          <td>202045678</td>
+          <td>Ingeniería de Sistemas</td>
+          <td><span class="estado pendiente">Pendiente</span></td>
+          <td><button class="btn ver">Evaluar</button></td>
+        </tr>
+        <tr onclick="abrirPanel('Carlos Gómez', '202012345', 'Derecho')">
+          <td>Carlos Gómez</td>
+          <td>202012345</td>
+          <td>Derecho</td>
+          <td><span class="estado aceptado">Aceptado</span></td>
+          <td><button class="btn ver">Evaluar</button></td>
+        </tr>
+        <tr onclick="abrirPanel('Laura Fernández', '202078912', 'Contaduría')">
+          <td>Laura Fernández</td>
+          <td>202078912</td>
+          <td>Contaduría</td>
+          <td><span class="estado rechazado">Rechazado</span></td>
+          <td><button class="btn ver">Evaluar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <!-- ====== PANEL DE EVALUACIÓN ====== -->
+  <div class="panel" id="panel-evaluacion">
+    <div class="panel-contenido">
+      <span class="cerrar" onclick="cerrarPanel()">&times;</span>
+      <h2>Evaluación del Estudiante</h2>
+      <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+      <p><strong>Código:</strong> <span id="codigo"></span></p>
+      <p><strong>Programa:</strong> <span id="programa"></span></p>
+
+      <h3>Documentos entregados</h3>
+      <ul>
+        <li><a href="#">Hoja de vida.pdf</a></li>
+        <li><a href="#">Carta de motivación.pdf</a></li>
+      </ul>
+
+      <h3>Comentarios del profesor</h3>
+      <textarea placeholder="Escribe tu evaluación aquí..."></textarea>
+
+      <h3>Puntaje</h3>
+      <input type="range" min="0" max="100" value="50">
+
+      <div class="acciones">
+        <button class="btn aceptar">Aceptar</button>
+        <button class="btn rechazar">Rechazar</button>
+      </div>
+    </div>
+  </div>
+  <script src="../script/evaluación_y_asignación.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: linear-gradient(90deg, #E30613, #ffffff);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  height: 50px;
+}
+
+.contenedor {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+h2, h3 {
+  color: #00274d;
+}
+
+.info-convocatoria {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.formulario {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.formulario input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.formulario button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #c8102e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.formulario button:hover {
+  background-color: #a60d25;
+}
+
+.estado-aplicacion {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.estado-card {
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.estado-card.pendiente {
+  background-color: #fff3cd;
+  border-left: 5px solid #ffc107;
+}
